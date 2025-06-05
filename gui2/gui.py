@@ -40,7 +40,5 @@ while True:
         case sg.WIN_CLOSED:
             break
 
+
 window.close()
-
-
-CPIA,C3SA,CRTA,CRT0COI,CCSP,CRTD
