@@ -30,7 +30,4 @@ while True:
         extract_archive(archivepath, dest_dir)
         window["output"].update(value="Extraction Completed")
 
-
-
-window.read()
 window.close()
