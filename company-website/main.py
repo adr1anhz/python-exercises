@@ -15,56 +15,56 @@ with col1:
     for index, row in df[:1].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[1:2].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[2:3].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[3:4].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
 
 
 with col2:
     for index, row in df[4:5].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[5:6].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[6:7].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[7:8].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
 
 
 with col3:
     for index, row in df[8:9].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[9:10].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[10:11].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
     for index, row in df[11:12].iterrows():
         st.header((row["first name"] + " " + row["last name"]).title())
         st.write(row["role"])
-        st.image(f"images/" + row["image"])
+        st.image(f"images/" + row["image"], use_container_width=True)
 
 
