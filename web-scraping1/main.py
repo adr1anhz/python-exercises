@@ -52,7 +52,7 @@ if __name__ == "__main__":
         scraped = scrape(URL)
         extracted = extract(scraped)
         print(extracted)
-        content = read(extracted)
+        
         if extracted != "No upcoming tours":
             row = read(extracted)
             if not row:
