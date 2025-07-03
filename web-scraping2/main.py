@@ -1,6 +1,7 @@
 import requests
 import selectorlib
 import datetime
+import sqlite3
 
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%d-%m-%Y-%H:%M:%S")
@@ -8,6 +9,9 @@ formatted_time = current_time.strftime("%d-%m-%Y-%H:%M:%S")
 URL = "https://programmer100.pythonanywhere.com/"
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+
+
+connection = sqlite3.connect("data")
 
 
 def scrape(url):
@@ -23,8 +27,11 @@ def extract(source):
     return value
 
 def store(extracted):
-     with open("logs.txt", "a") as file:
-          file.write(extracted + "\n")
+    row = extracted.split(",")
+    row = [item.strip() for item in row]
+    cursor = connection.cursor()
+    cursor.execute("INSERT INTO events VALUES(?,?)", row)
+    connection.commit()
 
 
 
