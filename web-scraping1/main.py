@@ -34,7 +34,8 @@ def store(extracted):
     row = extracted.split(",")
     row = [item.strip() for item in row]
     cursor = connection.cursor()
-    cursor.execute()
+    cursor.execute("INSERT INTO events VALUES(?,?,?)", row)
+    connection.commit()
 
 def read(extracted):
     row = extracted.split(",")
