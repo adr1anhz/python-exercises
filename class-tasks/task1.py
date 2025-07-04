@@ -6,5 +6,9 @@ class User:
         pass
 
     def age(self, current_year):
-        pass
+        age = current_year - self.birthyear
+        return age
+    
+user = User("John", 1999)
+print(user.age(2023))
     
