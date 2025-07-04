@@ -30,10 +30,10 @@ class Email:
         host = "smtp.gmail.com"
         port = 465
 
-        username = "afdafl.com"
-        password = "adfadfhds fltp"
+        username = "axasdasdgmail.com"
+        password = "rrasdasdchds fltp"
 
-        receiver = "adfadfail.com"
+        receiver = "axiasdasdmail.com"
         context = ssl.create_default_context()
 
         with smtplib.SMTP_SSL(host, port, context=context) as server:
@@ -42,8 +42,8 @@ class Email:
         print("Email was sent!")
 
 class Database:
-    def __init__(self):
-        self.connection = sqlite3.connect("data.db")
+    def __init__(self, database_path):
+        self.connection = sqlite3.connect(database_path)
 
     def store(self, extracted):
         row = extracted.split(",")
@@ -71,7 +71,7 @@ if __name__ == "__main__":
         print(extracted)
 
         if extracted != "No upcoming tours":
-            database = Database()
+            database = Database(database_path="data.db")
             row = database.read(extracted)
             if not row:
                 database.store(extracted)
