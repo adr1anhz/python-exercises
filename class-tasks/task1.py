@@ -3,7 +3,7 @@ class User:
         self.name = name
         self.birthyear = birthyear
     def get_name(self):
-        pass
+        return self.name.upper()
 
     def age(self, current_year):
         age = current_year - self.birthyear
@@ -11,4 +11,4 @@ class User:
     
 user = User("John", 1999)
 print(user.age(2023))
-    
+print(user.get_name())
