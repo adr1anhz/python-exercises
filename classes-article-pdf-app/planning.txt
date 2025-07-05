@@ -1,0 +1,14 @@
+1. Print articles.csv (We use library pandas for that)
+2. Prompt a user to Choose an article to buy
+3. Generate a receipt.pdf
+- Receipt nr.{id}
+- Article: {name}
+- Price: {price}
+
+Infos:
+We have in our csv : id,name,price,in stock
+
+
+Classes:
+Article
+Receipt
