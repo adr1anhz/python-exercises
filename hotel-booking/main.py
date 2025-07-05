@@ -3,7 +3,7 @@ import pandas
 df = pandas.read_csv("hotels.csv")
 
 class Hotel:
-    def __init__(self, id):
+    def __init__(self, hotel_id):
         pass
     def book(self):
         pass
@@ -19,8 +19,8 @@ class ReservationTicket:
 
 
 print(df)
-id = input("Enter the id of the hotel: ")
-hotel = Hotel(id)
+hotel_id = input("Enter the id of the hotel: ")
+hotel = Hotel(hotel_id)
 if hotel.available():
     hotel.book()
     name = input("Enter your name: ")
